@@ -44,6 +44,9 @@ group :development, :test do
 
   # Custom Dev Gems
   
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'railroady'
 end
 
 group :development do
