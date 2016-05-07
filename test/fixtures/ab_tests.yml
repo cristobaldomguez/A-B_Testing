@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: false
+  metrics: MyString
+  input_a: MyText
+  input_b: MyText
+  score_a: 1
+  score_b: 1
+  site_id: 
+
+two:
+  state: false
+  metrics: MyString
+  input_a: MyText
+  input_b: MyText
+  score_a: 1
+  score_b: 1
+  site_id: 
