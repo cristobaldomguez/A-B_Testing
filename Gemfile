@@ -33,17 +33,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Custom Gems
-gem 'pry-rails'
-gem 'quiet_assets'
-gem 'better_errors'
-gem 'railroady'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
   # Custom Dev Gems
-  
+  gem 'pry-rails'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'railroady'
