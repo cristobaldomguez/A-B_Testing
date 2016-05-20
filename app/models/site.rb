@@ -1,3 +1,6 @@
 class Site < ActiveRecord::Base
   belongs_to :user
+  has_many :ab_tests
+
 end
+
