@@ -5,20 +5,20 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-         enum role: [:admin, :user, :guest]
+	 enum role: [:sadmin, :admin, :user]
 
-  def default_role
-    self.role ||= 2
-  end
-  
-  def default_values
-  	self.role ||= 0
-  end
-  
-  def validate_username
-    if User.where(email: username).exists?
-      errors.add(:username, :invalid)
-    end
-  end
-  
+	  def default_role
+	    self.role ||= 2
+	  end
+	  
+	  def default_values
+	  	self.role ||= 0
+	  end
+	  
+	  def validate_username
+	    if User.where(email: username).exists?
+	      errors.add(:username, :invalid)
+	    end
+	  end
+
 end
