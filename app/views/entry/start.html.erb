@@ -1,0 +1,76 @@
+
+<body>
+
+   <header class"container-fluid">  
+          <div class="panel-defult">
+            <div class"panel-body">
+               <img src="http://fenitech.fenitech.cl/GAS/assets/up_1.jpg"alt="fondofenitech"  class="img-responsive"> 
+            </div>          
+                 <% if user_signed_in? %>
+                
+           
+                  <button type="button" class="btn btn-default" aria-label ="Left Align">
+                   <span> <%=link_to image_tag('/app/assets/images/start/salir.png'), destroy_user_session_path, method: :delete, data: {confirm: "Seguro que desea salir"}%></span>
+                </button> 
+
+               
+                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span><%=link_to image_tag('persona.png'), entry_start_path %>
+                  </span>
+                </button>
+                
+                <% else %>                 
+            <% end %>
+          </div>
+
+   </header>
+     <section class"container-fluid">  
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <a href="/entry/startsettings" class="thumbnail">
+                <img src="http://fenitech.fenitech.cl/GAS/Imagenes/conf2.gif" alt="..." class="img-responsive">
+              </a>
+            </div>
+        
+            <div class="col-xs-6 col-md-3">
+              <a href="#" class="thumbnail">
+                 <img src="http://fenitech.fenitech.cl/GAS/Imagenes/oficina2.gif" alt="..." class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <a href="#" class="thumbnail">
+                 <img src="http://fenitech.fenitech.cl/GAS/Imagenes/finanzas2.gif" alt="..." class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+               <a href="#" class="thumbnail">
+                  <img src="http://fenitech.fenitech.cl/GAS/Imagenes/operaciones2.gif" alt="..." class="img-responsive">
+               </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+               <a href="#" class="thumbnail">
+                  <img src="http://fenitech.fenitech.cl/GAS/Imagenes/bodega2.gif" alt="..." class="img-responsive">
+               </a>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+               <a href="#" class="thumbnail">
+                  <img src="http://fenitech.fenitech.cl/GAS/Imagenes/liquidaciones2.gif" alt="..." class="img-responsive">
+               </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+               <a href="#" class="thumbnail">
+                  <img src="http://fenitech.fenitech.cl/GAS/Imagenes/premiun2.gif" alt="..." class="img-responsive">
+               </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+               <a href="#" class="thumbnail">
+                <img src="http://fenitech.fenitech.cl/GAS/Imagenes/Tablet2.gif" alt="..." class="img-responsive">
+               </a>
+            </div>
+        </div>  
+   </section>
+
+</body>
+  	
+   
