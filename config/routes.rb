@@ -18,4 +18,7 @@ Rails.application.routes.draw do
       resources :sites
       resources :ab_tests
 
+       get 'entry/startsettings'
+       get 'entry/start'
+
 end
