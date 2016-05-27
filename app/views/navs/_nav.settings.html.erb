@@ -1,0 +1,256 @@
+<body>
+
+		<header class"panel-defult">
+		
+          <div class="container-fluid">
+          <nav class="navbar navbar-default">
+              <div class="navbar-header">
+        
+                 <div>
+                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-0" aria-expanded="true">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </div>  
+               </div>   
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0">   
+
+            <ul class="nav nav-pills">
+
+             <li>
+                <% if user_signed_in? && current_user.sadmin? %>
+                      <li class="nav-item">
+                      <span> <%= current_user.firstname=%></span><span> <%= current_user.lastname=%></span>
+                      <p>SuperAdministrador  <span class="sr-only">(current)</span></p>
+                      </li>
+
+                  <button type="button" class="btn btn-default" aria-label ="Left Align">
+                  <span> <%=link_to image_tag('start/salir.png'), destroy_user_session_path, method: :delete, data: {confirm: "Seguro que desea salir"}%></span>
+                  </button> 
+
+                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span> <%=link_to image_tag('start/inicio_1.png'), entry_start_path %>
+                  </span>
+                  </button>
+                  
+                  <% elsif user_signed_in? && current_user.admin? %>
+                      <li class="nav-item">
+                      <span> <%= current_user.firstname=%></span><span> <%= current_user.lastname=%></span>
+                      <p>Administrador  <span class="sr-only">(current)</span></p>
+                      </li>>
+
+                    <button type="button" class="btn btn-default" aria-label ="Left Align">
+                   <span> <%=link_to image_tag('start/salir.png'), destroy_user_session_path, method: :delete, data: {confirm: "Seguro que desea salir"}%></span>
+                  </button> 
+
+               
+                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span> <%=link_to image_tag('start/inicio_1.png'), entry_start_path %>
+                  </span>
+                  </button>
+
+                  <% elsif user_signed_in? && current_user.user?%>
+                      <li class="nav-item">
+                      <span> <%= current_user.firstname=%></span><span> <%= current_user.lastname=%></span>
+                      <p>Usuario<span class="sr-only">(current)</span></p>
+                      </li>>
+
+                  <button type="button" class="btn btn-default" aria-label ="Left Align">
+                   <span> <%=link_to image_tag('start/salir.png'), destroy_user_session_path, method: :delete, data: {confirm: "Seguro que desea salir"}%></span>
+                  </button> 
+
+               
+                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span> <%=link_to image_tag('start/inicio_1.png'), entry_start_path %>
+                  </span>
+                  </button>
+                                               
+            <% end %>       	
+            </li>
+              <li role="presentation" class="active"><a href="/settings/startsettings/">Inicio</a></li>
+              <li role="presentation" class="active"><a href="startsettings.html.erb">Quienes Somos</a></li>
+              <li role="presentation" class="active"><a href="">Vision</a></li>
+              <li role="presentation" class="active"><a href="#">Servicios</a></li>
+              
+            </ul>
+           </div>
+           </nav>
+         </div>
+           
+ <div class="container-fluid">
+           	
+   <nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+        
+          <div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+          </div>  
+      </div>
+
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav"> 
+       <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USUARIO<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li role="separator" class="divider"></li>
+            <li><a href="/users">Usuarios</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+     </ul> 
+
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="/providers#index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sitios <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li role="separator" class="divider"></li>
+            <li><a href="/categoryproviders#index">Sitios</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/providers#index">Proveedores</a></li>
+           
+          </ul>
+        </li>
+      </ul>
+    
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTOS Y SERVICIOS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/categoryproducts">Categoria</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/measures">Metricas</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/products">Productos y Servicios</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/product_providers">Asociar Productos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Restaura</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRECIOS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/purchaseprices">Listas Precios Compra</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/salveprices">Listas Precio Venta</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="purchase_price_histories">Historial Precio Venta</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="salve_price_histories">Historial Precio Compra</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>   
+      
+       <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RECURSOS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li role="separator" class="divider"></li>
+            <li><a href="/vehicleappeals">Vehiculos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/sectors">Sectores Geográficos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/sectors">Equipos comunicacionales</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul> 
+  
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PERSONAL <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/positions">Cargos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/personals">Personal</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Restaurar Personal</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Crear Comision</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Asignar Comisones</a></li>
+          </ul>
+         </li>
+      </ul>
+      
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FINANZAS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Operaciones</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Impuestos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Formas de Pago</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Conveios y Descuentos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Margenes Fijos</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Margenes Variables</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+         </li>
+      </ul>
+
+         <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CANALES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/canals">Listas Canales</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/salveprices"></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"></a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>   
+     
+       
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INVENTARIOS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+         </li>
+       </ul> 
+  </nav>
+</div>
+
+</header>
+
+
+
+	
+
+
+</body>
