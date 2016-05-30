@@ -3,17 +3,9 @@
 
 
 /* trigger when page is ready */
+//$(document).on('page:change', function() {
 $(document).ready(function (){
 
-	// your functions go here
-
-});
-
-
-
-
-/* optional triggers */
-
-$(window).resize(function() {
 	
+
 });
