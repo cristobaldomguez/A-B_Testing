@@ -47,6 +47,7 @@ Temporary Items
 # General CodeKit files to ignore
 config.codekit
 /min
+*.min.js
 
 
 ### SublimeText ###
