@@ -1,3 +1,243 @@
 body {
+	background-color: @colorGray_bg;
+	color: @colorFont;
 	font-family: 'Poppins', Helvetica;
+}
+
+a {
+
+}
+
+.container {
+	margin: 0 auto;
+	width: 1000px;		
+}
+
+header {
+	border-bottom: 1px solid @colorWhite;
+	height: 70px;
+
+	.container {
+		height: 70px;
+		margin: 0 auto;
+		
+		.mainMenu {
+			display: block;
+			float: left;
+			padding: 18px 0 0 0;
+			width: 10%;
+
+			.icon-menu {
+				color: @colorBlue;
+				font-size: 24px;
+			}	
+		}
+
+		.logo {
+			float: right;
+			width: 79.5%;
+
+			img {
+				display: block;
+				height: auto;
+				margin: 14px auto;
+				width: 153px;
+				
+				svg {
+						fill: #fff;
+					}
+				svg {
+
+					
+				}
+			}
+		}
+
+		.mainProfile {
+			border-radius: 50%;
+			float: right;
+			margin: 5px 5px 0 0;
+			width: 10%;
+
+			img {
+				height: 60px;
+			}
+		}
+	}
+}
+
+.content {
+	
+	.container {
+		margin: 0 auto;
+		
+	}
+}
+
+.login {
+	
+	.login-container {
+		background-color: @colorWhite;
+		border-radius: 5px;
+		height: 460px;
+		margin: 100px auto;
+		text-align: center;
+		width: 350px;
+		z-index: 1;
+
+		&:after {
+		    background: transparent url(../images/shadow_small.svg) no-repeat;
+		    bottom: 25px;
+		    content: "";
+		    display: block;
+		    height: 84px;
+		    opacity: 0.5;
+		    position: relative;
+		    width: 100%;
+		    z-index: -1;
+		}
+
+		.image_profile {
+			display: inline-block;
+			height: 160px;
+			margin: 30px 0;
+			width: 100%;
+		}
+
+		form {
+			
+			input:focus,
+			select:focus,
+			textarea:focus,
+			button:focus {
+				outline: none;
+			}
+
+			textarea,
+			input[type="text"],
+			input[type="email"],
+			input[type="button"],
+			input[type="submit"],
+			input[type="password"] {
+			     -webkit-appearance: none;
+			     -moz-appearance: none;
+			     border-radius: 0;
+			     border: 0;
+			     border-bottom: 1px solid @colorLightBlue;
+			     color: @colorLightBlue;
+			     font: 14px/28px 'Poppins', Helvetica;
+			     text-align: center;
+			     margin: 10px 10%;
+			     width: 80%;
+			}
+
+			::-webkit-input-placeholder {
+			   color: @colorLightBlue;
+			}
+
+			::-moz-placeholder {
+			   color: @colorLightBlue;
+			}
+
+			:-ms-input-placeholder {  
+			   color: @colorLightBlue;
+			}
+
+			button {
+				background-color: @colorLightBlue;
+				border: 1px solid @colorLightBlue;
+				color: @colorWhite;
+				cursor: pointer;
+				font: 14px/28px 'Poppins', Helvetica;
+				margin: 10px 10%;
+				padding: 10px 0;
+			    width: 80%;
+			}
+
+			button:hover {
+				background-color: @colorWhite;
+				color: @colorLightBlue;
+			}
+
+			.remember {
+				color: @colorFont;
+				font: 300 12px/24px 'Poppins', Helvetica;
+				text-align: left;
+				text-decoration: none;
+			}
+		}
+
+		.forgot {
+			color: @colorFont;
+			font: 300 12px/24px 'Poppins', Helvetica;
+			text-decoration: none;
+		}
+	}
+}
+
+.tests {
+	margin: 100px 0;
+
+	a {
+		color: @colorFont;
+		text-decoration: none;
+	}
+
+	.abtest {
+		background-color: @colorWhite;
+		border-radius: 5px;
+		display: block;
+		height: 93px;
+		margin: 50px auto;
+		padding: 17px;
+		width: 716px;
+		z-index: 1;
+
+		&:after {
+		    background: transparent url(../images/shadow_big.svg) no-repeat;
+		    content: "";
+		    display: block;
+		    height: 84px;
+		    opacity: 0.5;
+		    position: relative;
+		    top: 5px;
+		    width: 100%;
+		    z-index: -1;
+		}
+
+		figure {
+			float: right;
+			height: 94px;
+			margin: 0;
+
+			img {
+				display: block;
+				height: 94px;
+			}
+		}
+
+		h3 {
+			font-weight: 500;
+			font-size: 18px;
+			margin: 20px 0 0 0;
+		}
+
+		time {
+			font-weight: 300;
+			font-size: 14px;
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid @colorWhite;
+	height: 50px;
+	text-align: center;
+	
+	small {
+		color: @colorFont_footer;
+		display: block;
+		font-weight: 300;
+		margin-top: 13px;
+	}
 }
