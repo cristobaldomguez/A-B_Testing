@@ -1,3 +1,12 @@
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
 body {
 	background-color: @colorGray_bg;
 	color: @colorFont;
@@ -225,6 +234,205 @@ header {
 		time {
 			font-weight: 300;
 			font-size: 14px;
+		}
+	}
+}
+
+.detail {
+	
+	.container { 
+		width: 496px;
+		height: 715px;
+		margin: 50px auto;
+		position: relative;
+		perspective: 800px;
+	}
+
+	#card {
+		border-radius: 5px;
+		height: 100%;
+		width: 100%;
+		-webkit-transition: -webkit-transform 1s;
+		   -moz-transition: -moz-transform 1s;
+		     -o-transition: -o-transform 1s;
+				transition: transform 1s;
+		-webkit-transform-style: preserve-3d;
+		   -moz-transform-style: preserve-3d;
+		     -o-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+		-webkit-transform-origin: right center;
+		   -moz-transform-origin: right center;
+		     -o-transform-origin: right center;
+		        transform-origin: right center;
+
+		&.flipped {
+			-webkit-transform: translateX( -100% ) rotateY( -180deg );
+			   -moz-transform: translateX( -100% ) rotateY( -180deg );
+			     -o-transform: translateX( -100% ) rotateY( -180deg );
+			        transform: translateX( -100% ) rotateY( -180deg );
+		}
+
+		.front {
+			background: @colorWhite;
+		}
+
+		.back {
+			background: @colorWhite;
+			-webkit-transform: rotateY( 180deg );
+			   -moz-transform: rotateY( 180deg );
+			     -o-transform: rotateY( 180deg );
+			        transform: rotateY( 180deg );
+		}
+
+		.test {
+			border-radius: inherit;
+			display: block;
+			height: inherit;
+			position: absolute;
+			width: inherit;
+			z-index: 1;
+
+			.hiddenContent {
+				border-radius: inherit;
+				height: inherit;
+				overflow: hidden;
+				width: inherit;
+
+				figure {
+					display: block;
+					height: inherit;
+					width: inherit;
+					-webkit-backface-visibility: hidden;
+					   -moz-backface-visibility: hidden;
+					     -o-backface-visibility: hidden;
+					        backface-visibility: hidden;
+
+					img {
+						display: block;
+						margin: 0 auto;
+						padding-top: 55px;
+						width: 250px;
+					}
+				}
+				
+				.side {
+					border-radius: inherit;
+					height: 420px;
+					margin: 0;
+					width: 100%;
+
+					&.orange_gr {
+						background: @colorOrange_gr;
+						background: -moz-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
+						background: -webkit-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
+						background: linear-gradient(to bottom, @colorOrange_gr 0%, @colorYellow_gr 100%);
+					}
+
+					&.blue_gr {
+						background: @colorBlue_gr;
+						background: -moz-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+						background: -webkit-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+						background: linear-gradient(to bottom, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+					}
+
+					&.purple_gr {
+						background: @colorPurple_gr;
+						background: -moz-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+						background: -webkit-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+						background: linear-gradient(to bottom, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+					}
+
+					&.green_gr {
+						background: @colorGreen_gr;
+						background: -moz-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+						background: -webkit-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+						background: linear-gradient(to bottom, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+					}
+
+					&.mask {
+						-webkit-mask-image: url(../images/wave.svg);
+								mask-image: url(../images/wave.svg);
+									//mask: url(../images/wave_ff.svg#wave);
+						mask-mode: alpha;
+						-webkit-mask-repeat: repeat-x;
+								mask-repeat: repeat-x;
+						-webkit-mask-size: cover;
+						        mask-size: cover;
+						-webkit-mask-origin: margin-box;
+						-webkit-mask-position-x: 140px;
+
+						&.b {
+							-webkit-mask-position-x: -140px;							
+						}
+					}
+				}
+
+				h3,
+				.option {
+					text-align: center;
+				}
+				
+				h3 {
+					font: 500 18px/26px 'Poppins', Helvetica;
+				}
+
+				.option {
+					display: block;
+					font: 300 14px/26px 'Poppins', Helvetica;
+				}
+
+				ul {
+					border-bottom: 1px solid @colorFont;
+					padding: 8% 0;
+
+					li {
+						border-bottom: 1px solid @colorBorder;
+						padding: 1% 5%;
+						margin: 1% 0;
+
+						p {
+
+							.percent {
+								float: right;
+
+								&:after {
+									content: "%";
+								}
+							}
+						}
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+				
+				.flip_icon {
+					color: @colorFont;
+					cursor: pointer;
+					display: block;
+					font-size: 21px;
+					margin: 5px;
+					width: 98%;
+					text-align: right
+				}
+			}
+
+			&.back {
+				transform: rotateY( 180deg );
+			}
+		}
+
+		&:after {
+		    background: transparent url(../images/shadow_med.svg) no-repeat center;
+		    content: "";
+		    display: block;
+		    height: 84px;
+		    opacity: 0.5;
+		    position: relative;
+		    top: 670px;
+		    width: 100%;
+		    z-index: -1;
 		}
 	}
 }

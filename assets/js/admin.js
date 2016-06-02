@@ -6,6 +6,9 @@
 //$(document).on('page:change', function() {
 $(document).ready(function (){
 
-	
+	$('.flip').click(function(event) {
+		event.preventDefault();
+		$('#card').toggleClass('flipped');
+	});
 
 });
