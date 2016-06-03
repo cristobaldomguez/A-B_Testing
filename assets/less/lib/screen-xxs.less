@@ -1,0 +1,317 @@
+@import "variables.less";
+
+
+/* <!---------- Small Phones ----------> */
+@media all and (max-width: 480px) {
+
+	.container {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	header {
+		height: 70px;
+
+		.container {
+			height: 70px;
+			margin: 0 auto;
+			
+			.mainMenu {
+				float: left;
+				padding: 18px 0 0 0;
+				width: 17%;
+
+				.icon-menu {
+					font-size: 24px;
+					margin-left: 10px;
+				}	
+			}
+
+			.logo {
+				float: right;
+				width: 64.4%;
+
+				img {
+					height: auto;
+					margin: 14px auto;
+					width: 153px;
+					
+					svg {
+						
+					}
+				}
+			}
+
+			.mainProfile {
+				float: right;
+				margin: 5px 5px 0 0;
+				width: 17%;
+
+				img {
+					height: 60px;
+				}
+			}
+		}
+	}
+
+	.content {
+		
+		.container {
+			margin: 0 auto;
+			
+		}
+	}
+
+	.login {
+		
+		.login-container {
+			height: 460px;
+			margin: 100px auto;
+			width: 350px;
+
+			&:after {
+				bottom: 25px;
+				height: 84px;
+				width: 100%;
+			}
+
+			.image_profile {
+				height: 160px;
+				margin: 30px 0;
+				width: 100%;
+			}
+
+			form {
+				
+				input:focus,
+				select:focus,
+				textarea:focus,
+				button:focus {
+					
+				}
+
+				textarea,
+				input[type="text"],
+				input[type="email"],
+				input[type="button"],
+				input[type="submit"],
+				input[type="password"] {
+					margin: 10px 10%;
+					width: 80%;
+				}
+
+				button {
+					margin: 10px 10%;
+					padding: 10px 0;
+					width: 80%;
+				}
+
+				.remember {
+					font-size: 12px;
+					line-height: 24px;
+				}
+			}
+
+			.forgot {
+				font-size: 12px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	.tests {
+		margin: 100px 0;
+
+		a {
+			
+		}
+
+		.abtest {
+			height: 93px;
+			margin: 50px auto;
+			padding: 17px;
+			width: 90%;
+			min-width: 430px;
+			max-width: 716px;
+
+			&:after {
+				height: 1px;
+				top: 38px;
+				margin: 0 auto;
+				width: 95%;
+			}
+
+			figure {
+				height: 94px;
+				margin: 0;
+
+				img {
+					height: 94px;
+				}
+			}
+
+			h3 {
+				font-size: 18px;
+				margin: 20px 0 0 0;
+			}
+
+			time {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.detail {
+		
+		.container { 
+			height: 715px;
+			margin: 50px auto;
+			width: 95%;
+			max-width: 450px;
+		}
+
+		#card {
+			width: 100%;
+
+			&.flipped {
+				
+			}
+
+			.front {
+				
+			}
+
+			.back {
+				
+			}
+
+			.test {
+				height: inherit;
+				width: inherit;
+
+				.hiddenContent {
+					height: inherit;
+					width: inherit;
+
+					figure {
+						height: inherit;
+						width: inherit;
+
+						img {
+							height: 100%;
+							margin: 0 auto;
+							vertical-align: middle;
+							width: 200px;
+							
+									
+							
+						}
+					}
+
+					.side {
+						height: 345px;
+						margin: 0;
+						width: 100%;
+
+						&.orange_gr {
+							
+						}
+
+						&.blue_gr {
+							
+						}
+
+						&.purple_gr {
+							
+						}
+
+						&.green_gr {
+							
+						}
+
+						&.mask {
+							-webkit-mask-position-x: 70px;
+							-webkit-mask-size: auto 500px;
+									mask-size: auto 500px;
+
+							&.b {
+								-webkit-mask-position-x: -140px;
+							}
+						}
+					}
+
+					h3,
+					.option {
+						
+					}
+
+					h3 {
+						margin-top: 30px;
+					}
+
+					.option {
+						
+					}
+
+					ul {
+						padding: 8% 0;
+
+						li {
+							padding: 1% 5%;
+							margin: 1% 0;
+
+							p {
+
+								.percent {
+
+									&:after {
+										
+									}
+								}
+							}
+
+							&:last-child {
+								
+							}
+						}
+					}
+					
+					.flip_icon {
+						font-size: 21px;
+						margin: 5px;
+						width: 98%;
+					}
+				}
+
+				&.back {
+					
+				}
+			}
+
+			&:after {
+				height: 1px;
+				top: 100%;
+				width: 85%;
+			}
+		}
+	}
+
+	footer {
+		height: 50px;
+		
+		small {
+			font-weight: 300;
+			margin-top: 13px;
+		}
+	}
+}
+
+/* <!---- Portrait Orientation ----> */
+@media all and (max-width: 480px) and (orientation:portrait) {
+	
+}
+
+/* <!---- Landscape Orientation ----> */
+@media all and (max-width: 480px) (orientation:landscape) {
+	
+}

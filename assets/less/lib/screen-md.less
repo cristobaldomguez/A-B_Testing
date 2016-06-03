@@ -1,0 +1,311 @@
+@import "variables.less";
+
+
+/* <!---------- Big Tablets ----------> */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+
+	.container {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1000px;
+	}
+
+	header {
+		height: 70px;
+
+		.container {
+			height: 70px;
+			margin: 0 auto;
+			
+			.mainMenu {
+				float: left;
+				padding: 18px 0 0 0;
+				width: 10%;
+
+				.icon-menu {
+					font-size: 24px;
+					margin-left: 30px;
+				}	
+			}
+
+			.logo {
+				float: right;
+				width: 79.4%;
+
+				img {
+					height: auto;
+					margin: 14px auto;
+					width: 153px;
+					
+					svg {
+						
+					}
+				}
+			}
+
+			.mainProfile {
+				float: right;
+				margin: 5px 5px 0 0;
+				width: 10%;
+
+				img {
+					height: 60px;
+				}
+			}
+		}
+	}
+
+	.content {
+		
+		.container {
+			margin: 0 auto;
+			
+		}
+	}
+
+	.login {
+		
+		.login-container {
+			height: 460px;
+			margin: 100px auto;
+			width: 350px;
+
+			&:after {
+				height: 1px;
+				top: 8px;
+				width: 85%;
+			}
+
+			.image_profile {
+				height: 160px;
+				margin: 30px 0;
+				width: 100%;
+			}
+
+			form {
+				
+				input:focus,
+				select:focus,
+				textarea:focus,
+				button:focus {
+					
+				}
+
+				textarea,
+				input[type="text"],
+				input[type="email"],
+				input[type="button"],
+				input[type="submit"],
+				input[type="password"] {
+					margin: 10px 10%;
+					width: 80%;
+				}
+
+				button {
+					margin: 10px 10%;
+					padding: 10px 0;
+					width: 80%;
+				}
+
+				.remember {
+					font-size: 12px;
+					line-height: 24px;
+				}
+			}
+
+			.forgot {
+				font-size: 12px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	.tests {
+		margin: 100px 0;
+
+		a {
+			
+		}
+
+		.abtest {
+			height: 93px;
+			margin: 50px auto;
+			padding: 17px;
+			width: 716px;
+
+			&:after {
+				height: 1px;
+				top: 38px;
+				margin: 0 auto;
+				width: 95%;
+			}
+
+			figure {
+				height: 94px;
+				margin: 0;
+
+				img {
+					height: 94px;
+				}
+			}
+
+			h3 {
+				font-size: 18px;
+				margin: 20px 0 0 0;
+			}
+
+			time {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.detail {
+		
+		.container { 
+			height: 715px;
+			margin: 50px auto;
+			width: 496px;
+		}
+
+		#card {
+			width: 100%;
+
+			&.flipped {
+				
+			}
+
+			.front {
+				
+			}
+
+			.back {
+				
+			}
+
+			.test {
+				height: inherit;
+				width: inherit;
+
+				.hiddenContent {
+					height: inherit;
+					width: inherit;
+
+					figure {
+						height: inherit;
+						width: inherit;
+
+						img {
+							margin: 0 auto;
+							padding-top: 55px;
+							width: 250px;
+						}
+					}
+
+					.side {
+						height: 400px;
+						margin: 0;
+						width: 100%;
+
+						&.orange_gr {
+							
+						}
+
+						&.blue_gr {
+							
+						}
+
+						&.purple_gr {
+							
+						}
+
+						&.green_gr {
+							
+						}
+
+						&.mask {
+							-webkit-mask-position-x: 140px;
+							-webkit-mask-size: auto 580px;
+									mask-size: auto 580px;
+
+							&.b {
+								-webkit-mask-position-x: -140px;
+							}
+						}
+					}
+
+					h3,
+					.option {
+						
+					}
+
+					h3 {
+						margin-top: 30px;
+					}
+
+					.option {
+						
+					}
+
+					ul {
+						padding: 8% 0;
+
+						li {
+							padding: 1% 5%;
+							margin: 1% 0;
+
+							p {
+
+								.percent {
+
+									&:after {
+										
+									}
+								}
+							}
+
+							&:last-child {
+								
+							}
+						}
+					}
+					
+					.flip_icon {
+						font-size: 21px;
+						margin: 5px;
+						width: 98%;
+					}
+				}
+
+				&.back {
+					
+				}
+			}
+
+			&:after {
+				height: 1px;
+				top: 726px;
+				width: 90%;
+			}
+		}
+	}
+
+	footer {
+		height: 50px;
+		
+		small {
+			font-weight: 300;
+			margin-top: 13px;
+		}
+	}
+}
+
+/* <!---- Portrait Orientation ----> */
+@media all and (min-width: 992px) and (max-width: 1200px) and (orientation:portrait) {
+	
+}
+
+/* <!---- Landscape Orientation ----> */
+@media all and (min-width: 992px) and (max-width: 1200px) and (orientation:landscape) {
+
+}
