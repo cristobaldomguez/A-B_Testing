@@ -1,0 +1,473 @@
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+	background-color: @colorGray_bg;
+	color: @colorFont;
+	font-family: 'Poppins', Helvetica;
+}
+
+a {
+
+}
+
+.container {
+	
+}
+
+header {
+	border-bottom: 1px solid @colorWhite;
+
+	.container {
+		
+		.mainMenu {
+			display: block;
+
+			.icon-menu {
+				color: @colorBlue;
+			}	
+		}
+
+		.logo {
+
+			img {
+				display: block;
+				
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+
+		.mainProfile {
+			border-radius: 50%;
+
+			img {
+				
+			}
+		}
+	}
+}
+
+.content {
+	
+	.container {
+		
+	}
+}
+
+.login {
+	
+	.login-container {
+		background-color: @colorWhite;
+		border-radius: 5px;
+		text-align: center;
+		z-index: 1;
+
+		&:after {
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+			content: "";
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			z-index: -1;
+		}
+
+		.image_profile {
+			display: inline-block;
+		}
+
+		form {
+			
+			input:focus,
+			select:focus,
+			textarea:focus,
+			button:focus {
+				outline: none;
+			}
+
+			textarea,
+			input[type="text"],
+			input[type="email"],
+			input[type="button"],
+			input[type="submit"],
+			input[type="password"] {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				border-radius: 0;
+				border: 0;
+				border-bottom: 1px solid @colorLightBlue;
+				color: @colorLightBlue;
+				font: 14px/28px 'Poppins', Helvetica;
+				text-align: center;
+			}
+
+			::-webkit-input-placeholder {
+			   color: @colorLightBlue;
+			}
+			
+			::-moz-placeholder {
+			   color: @colorLightBlue;
+			}
+			
+			:-ms-input-placeholder {
+			   color: @colorLightBlue;
+			}
+
+			button {
+				background-color: @colorLightBlue;
+				border: 1px solid @colorLightBlue;
+				color: @colorWhite;
+				cursor: pointer;
+				font: 14px/28px 'Poppins', Helvetica;
+			}
+
+			button:hover {
+				background-color: @colorWhite;
+				color: @colorLightBlue;
+			}
+
+			.remember {
+				color: @colorFont;
+				font: 300 12px/24px 'Poppins', Helvetica;
+				text-align: left;
+				text-decoration: none;
+			}
+		}
+
+		.forgot {
+			color: @colorFont;
+			font: 300 12px/24px 'Poppins', Helvetica;
+			text-decoration: none;
+		}
+	}
+}
+
+.tests {
+
+	a {
+		color: @colorFont;
+		text-decoration: none;
+	}
+
+	.abtest {
+		background-color: @colorWhite;
+		border-radius: 5px;
+		display: block;
+		height: 93px;
+		margin: 50px auto;
+		padding: 17px;
+		width: 716px;
+
+		&:after {
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+			content: "";
+			display: block;
+			position: relative;
+			z-index: -1;
+		}
+
+		figure {
+			float: right;
+
+			img {
+				display: block;
+			}
+		}
+
+		h3 {
+			font-weight: 500;
+		}
+
+		time {
+			font-weight: 300;
+		}
+	}
+}
+
+.detail {
+	
+	.container { 
+		perspective: 800px;
+	}
+
+	#card {
+		border-radius: 5px;
+		clear: both;
+		display: flex;
+		height: 100%;
+		-webkit-transform-origin: right center;
+		   -moz-transform-origin: right center;
+		     -o-transform-origin: right center;
+		        transform-origin: right center;
+		-webkit-transform-style: preserve-3d;
+		   -moz-transform-style: preserve-3d;
+		     -o-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+		-webkit-transition: -webkit-transform 1s;
+		   -moz-transition:    -moz-transform 1s;
+		     -o-transition:      -o-transform 1s;
+				transition:         transform 1s;
+
+		&.flipped {
+			-webkit-transform: translateX( -100% ) rotateY( -180deg );
+			   -moz-transform: translateX( -100% ) rotateY( -180deg );
+			     -o-transform: translateX( -100% ) rotateY( -180deg );
+			        transform: translateX( -100% ) rotateY( -180deg );
+		}
+
+		.front {
+			background: @colorWhite;
+		}
+
+		.back {
+			background: @colorWhite;
+			-webkit-transform: rotateY( 180deg );
+			   -moz-transform: rotateY( 180deg );
+			     -o-transform: rotateY( 180deg );
+			        transform: rotateY( 180deg );
+		}
+
+		.test {
+			border-radius: inherit;
+			display: block;
+			position: absolute;
+			z-index: 1;
+
+			.hiddenContent {
+				border-radius: inherit;
+				overflow: hidden;
+
+				figure {
+					display: block;
+					-webkit-backface-visibility: hidden;
+					   -moz-backface-visibility: hidden;
+					     -o-backface-visibility: hidden;
+					        backface-visibility: hidden;
+
+					img {
+						display: block;
+					}
+				}
+				
+				.side {
+					border-radius: inherit;
+
+					&.orange_gr {
+						background: @colorOrange_gr;
+						background: -moz-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
+						background: -webkit-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
+						background: linear-gradient(to bottom, @colorOrange_gr 0%, @colorYellow_gr 100%);
+					}
+
+					&.blue_gr {
+						background: @colorBlue_gr;
+						background: -moz-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+						background: -webkit-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+						background: linear-gradient(to bottom, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+					}
+
+					&.purple_gr {
+						background: @colorPurple_gr;
+						background: -moz-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+						background: -webkit-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+						background: linear-gradient(to bottom, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+					}
+
+					&.green_gr {
+						background: @colorGreen_gr;
+						background: -moz-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+						background: -webkit-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+						background: linear-gradient(to bottom, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+					}
+
+					&.mask {
+						-webkit-mask-image: url(../images/wave.svg);
+								mask-image: url(../images/wave.svg);
+									//mask: url(../images/wave_ff.svg#wave);
+						mask-mode: alpha;
+						-webkit-mask-repeat: repeat-x;
+								mask-repeat: repeat-x;
+						-webkit-mask-origin: margin-box;
+
+						&.b {
+							
+						}
+					}
+				}
+
+				h3,
+				.option {
+					text-align: center;
+				}
+				
+				h3 {
+					font: 500 18px/26px 'Poppins', Helvetica;
+				}
+
+				.option {
+					display: block;
+					font: 300 14px/26px 'Poppins', Helvetica;
+				}
+
+				ul {
+					border-bottom: 1px solid @colorFont;
+
+					li {
+						border-bottom: 1px solid @colorBorder;
+
+						p {
+
+							.percent {
+								float: right;
+
+								&:after {
+									content: "%";
+								}
+							}
+						}
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+
+				.flip_icon {
+					color: @colorFont;
+					cursor: pointer;
+					display: block;
+					text-align: right
+				}
+			}
+
+			&.back {
+				transform: rotateY( 180deg );
+			}
+		}
+
+		&:after {
+			align-self: flex-end;
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+			content: "";
+			display: inline-block;
+			height: 1px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.sites {
+	text-align: center;
+
+	ul.container {
+		clear: both;
+	}
+
+	.site-container {
+		background-color: @colorWhite;
+		border-radius: 5px;
+		display: inline-block;
+		height: 340px;
+		list-style: none;
+		margin: 50px 2%;
+		width: 350px;
+		z-index: 1;
+
+		svg {
+			margin: 30px auto;
+			width: 157px;
+		}
+
+		&.green {
+
+			svg {
+				fill: url(#green_gr);
+			}
+		}
+
+		&.purple {
+
+			svg {
+				fill: url(#purple_gr);
+			}
+		}
+
+		&.blue {
+
+			svg {
+				fill: url(#blue_gr);
+			}
+		}
+
+		&.orange {
+
+			svg {
+				fill: url(#orange_gr);
+			}
+		}
+
+		a {
+			color: @colorFont;
+			text-decoration: none;
+		}
+
+		&:after {
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+			content: "";
+			display: block;
+			height: 1px;
+			margin: 0 auto;
+			position: relative;
+			top: -2px;
+			width: 85%;
+			z-index: -1;
+		}
+
+		h3 {
+			font: 300 24px/26px 'Poppins', Helvetica;
+			height: 78px;
+
+			span {
+				font-weight: 500;
+			}
+		}
+
+		.bottom {
+			border-top: 1px solid @colorBorder;
+			clear: both;
+			height: 37px;
+			text-align: left;
+			width: 100%;
+
+			a {
+				color: @colorFont;
+				float: left;
+				margin: 4px;
+				padding: 3px;
+
+				&:hover {
+					background-color: @colorFont;
+					border-radius: 5px;
+					color: white;
+				}				
+			}
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid @colorWhite;
+	text-align: center;
+	
+	small {
+		color: @colorFont_footer;
+		display: block;
+	}
+}
