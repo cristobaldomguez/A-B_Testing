@@ -8,8 +8,8 @@
 }
 
 body {
-	background-color: @colorGray_bg;
-	color: @colorFont;
+	background-color: $colorGray_bg;
+	color: $colorFont;
 	font-family: 'Poppins', Helvetica;
 }
 
@@ -22,7 +22,7 @@ a {
 }
 
 header {
-	border-bottom: 1px solid @colorWhite;
+	border-bottom: 1px solid $colorWhite;
 
 	.container {
 		
@@ -30,7 +30,7 @@ header {
 			display: block;
 
 			.icon-menu {
-				color: @colorBlue;
+				color: $colorBlue;
 			}	
 		}
 
@@ -65,7 +65,7 @@ header {
 .login {
 	
 	.login-container {
-		background-color: @colorWhite;
+		background-color: $colorWhite;
 		border-radius: 5px;
 		text-align: center;
 		z-index: 1;
@@ -102,39 +102,39 @@ header {
 				-moz-appearance: none;
 				border-radius: 0;
 				border: 0;
-				border-bottom: 1px solid @colorLightBlue;
-				color: @colorLightBlue;
+				border-bottom: 1px solid $colorLightBlue;
+				color: $colorLightBlue;
 				font: 14px/28px 'Poppins', Helvetica;
 				text-align: center;
 			}
 
 			::-webkit-input-placeholder {
-			   color: @colorLightBlue;
+			   color: $colorLightBlue;
 			}
 			
 			::-moz-placeholder {
-			   color: @colorLightBlue;
+			   color: $colorLightBlue;
 			}
 			
 			:-ms-input-placeholder {
-			   color: @colorLightBlue;
+			   color: $colorLightBlue;
 			}
 
 			button {
-				background-color: @colorLightBlue;
-				border: 1px solid @colorLightBlue;
-				color: @colorWhite;
+				background-color: $colorLightBlue;
+				border: 1px solid $colorLightBlue;
+				color: $colorWhite;
 				cursor: pointer;
 				font: 14px/28px 'Poppins', Helvetica;
 			}
 
 			button:hover {
-				background-color: @colorWhite;
-				color: @colorLightBlue;
+				background-color: $colorWhite;
+				color: $colorLightBlue;
 			}
 
 			.remember {
-				color: @colorFont;
+				color: $colorFont;
 				font: 300 12px/24px 'Poppins', Helvetica;
 				text-align: left;
 				text-decoration: none;
@@ -142,7 +142,7 @@ header {
 		}
 
 		.forgot {
-			color: @colorFont;
+			color: $colorFont;
 			font: 300 12px/24px 'Poppins', Helvetica;
 			text-decoration: none;
 		}
@@ -152,12 +152,12 @@ header {
 .tests {
 
 	a {
-		color: @colorFont;
+		color: $colorFont;
 		text-decoration: none;
 	}
 
 	.abtest {
-		background-color: @colorWhite;
+		background-color: $colorWhite;
 		border-radius: 5px;
 		display: block;
 		height: 93px;
@@ -223,11 +223,11 @@ header {
 		}
 
 		.front {
-			background: @colorWhite;
+			background: $colorWhite;
 		}
 
 		.back {
-			background: @colorWhite;
+			background: $colorWhite;
 			-webkit-transform: rotateY( 180deg );
 			   -moz-transform: rotateY( 180deg );
 			     -o-transform: rotateY( 180deg );
@@ -260,31 +260,31 @@ header {
 					border-radius: inherit;
 
 					&.orange_gr {
-						background: @colorOrange_gr;
-						background: -moz-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
-						background: -webkit-linear-gradient(top, @colorOrange_gr 0%, @colorYellow_gr 100%);
-						background: linear-gradient(to bottom, @colorOrange_gr 0%, @colorYellow_gr 100%);
+						background: $colorOrange_gr;
+						background: -moz-linear-gradient(top, $colorOrange_gr 0%, $colorYellow_gr 100%);
+						background: -webkit-linear-gradient(top, $colorOrange_gr 0%, $colorYellow_gr 100%);
+						background: linear-gradient(to bottom, $colorOrange_gr 0%, $colorYellow_gr 100%);
 					}
 
 					&.blue_gr {
-						background: @colorBlue_gr;
-						background: -moz-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
-						background: -webkit-linear-gradient(top, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
-						background: linear-gradient(to bottom, @colorBlue_gr 0%, @colorLightBlue_gr 100%);
+						background: $colorBlue_gr;
+						background: -moz-linear-gradient(top, $colorBlue_gr 0%, $colorLightBlue_gr 100%);
+						background: -webkit-linear-gradient(top, $colorBlue_gr 0%, $colorLightBlue_gr 100%);
+						background: linear-gradient(to bottom, $colorBlue_gr 0%, $colorLightBlue_gr 100%);
 					}
 
 					&.purple_gr {
-						background: @colorPurple_gr;
-						background: -moz-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
-						background: -webkit-linear-gradient(top, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
-						background: linear-gradient(to bottom, @colorPurple_gr 0%, @colorLightPurple_gr 100%);
+						background: $colorPurple_gr;
+						background: -moz-linear-gradient(top, $colorPurple_gr 0%, $colorLightPurple_gr 100%);
+						background: -webkit-linear-gradient(top, $colorPurple_gr 0%, $colorLightPurple_gr 100%);
+						background: linear-gradient(to bottom, $colorPurple_gr 0%, $colorLightPurple_gr 100%);
 					}
 
 					&.green_gr {
-						background: @colorGreen_gr;
-						background: -moz-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
-						background: -webkit-linear-gradient(top, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
-						background: linear-gradient(to bottom, @colorGreen_gr 0%, @colorLightGreen_gr 100%);
+						background: $colorGreen_gr;
+						background: -moz-linear-gradient(top, $colorGreen_gr 0%, $colorLightGreen_gr 100%);
+						background: -webkit-linear-gradient(top, $colorGreen_gr 0%, $colorLightGreen_gr 100%);
+						background: linear-gradient(to bottom, $colorGreen_gr 0%, $colorLightGreen_gr 100%);
 					}
 
 					&.mask {
@@ -317,10 +317,10 @@ header {
 				}
 
 				ul {
-					border-bottom: 1px solid @colorFont;
+					border-bottom: 1px solid $colorFont;
 
 					li {
-						border-bottom: 1px solid @colorBorder;
+						border-bottom: 1px solid $colorBorder;
 
 						p {
 
@@ -340,7 +340,7 @@ header {
 				}
 
 				.flip_icon {
-					color: @colorFont;
+					color: $colorFont;
 					cursor: pointer;
 					display: block;
 					text-align: right
@@ -371,7 +371,7 @@ header {
 	}
 
 	.site-container {
-		background-color: @colorWhite;
+		background-color: $colorWhite;
 		border-radius: 5px;
 		display: inline-block;
 		height: 340px;
@@ -414,7 +414,7 @@ header {
 		}
 
 		a {
-			color: @colorFont;
+			color: $colorFont;
 			text-decoration: none;
 		}
 
@@ -440,20 +440,20 @@ header {
 		}
 
 		.bottom {
-			border-top: 1px solid @colorBorder;
+			border-top: 1px solid $colorBorder;
 			clear: both;
 			height: 37px;
 			text-align: left;
 			width: 100%;
 
 			a {
-				color: @colorFont;
+				color: $colorFont;
 				float: left;
 				margin: 4px;
 				padding: 3px;
 
 				&:hover {
-					background-color: @colorFont;
+					background-color: $colorFont;
 					border-radius: 5px;
 					color: white;
 				}				
@@ -463,11 +463,11 @@ header {
 }
 
 footer {
-	border-top: 1px solid @colorWhite;
+	border-top: 1px solid $colorWhite;
 	text-align: center;
 	
 	small {
-		color: @colorFont_footer;
+		color: $colorFont_footer;
 		display: block;
 	}
 }

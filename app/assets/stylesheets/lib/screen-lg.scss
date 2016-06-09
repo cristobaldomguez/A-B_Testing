@@ -1,13 +1,12 @@
-@import "variables.less";
+@import "variables.scss";
 
 
-/* <!---------- Big Tablets ----------> */
-@media all and (min-width: 992px) and (max-width: 1199px) {
+/* <!---------- Desktops ----------> */
+@media all and (min-width: 1200px) {
 
 	.container {
 		margin: 0 auto;
-		width: 100%;
-		max-width: 1000px;
+		width: 1000px;
 	}
 
 	header {
@@ -30,7 +29,7 @@
 
 			.logo {
 				float: right;
-				width: 79.4%;
+				width: 79.5%;
 
 				img {
 					height: auto;
@@ -299,11 +298,11 @@
 }
 
 /* <!---- Portrait Orientation ----> */
-@media all and (min-width: 992px) and (max-width: 1200px) and (orientation:portrait) {
+@media all and (min-width: 1200px) and (orientation:portrait) {
 	
 }
 
 /* <!---- Landscape Orientation ----> */
-@media all and (min-width: 992px) and (max-width: 1200px) and (orientation:landscape) {
+@media all and (min-width: 1200px) and (orientation:landscape) {
 
 }

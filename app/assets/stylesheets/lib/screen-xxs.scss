@@ -1,12 +1,12 @@
-@import "variables.less";
+@import "variables.scss";
 
 
-/* <!---------- Desktops ----------> */
-@media all and (min-width: 1200px) {
+/* <!---------- Small Phones ----------> */
+@media all and (max-width: 480px) {
 
 	.container {
 		margin: 0 auto;
-		width: 1000px;
+		width: 100%;
 	}
 
 	header {
@@ -19,17 +19,17 @@
 			.mainMenu {
 				float: left;
 				padding: 18px 0 0 0;
-				width: 10%;
+				width: 20%;
 
 				.icon-menu {
 					font-size: 24px;
-					margin-left: 30px;
+					margin-left: 10px;
 				}	
 			}
 
 			.logo {
 				float: right;
-				width: 79.5%;
+				width: 61.4%;
 
 				img {
 					height: auto;
@@ -45,7 +45,7 @@
 			.mainProfile {
 				float: right;
 				margin: 5px 5px 0 0;
-				width: 10%;
+				width: 17%;
 
 				img {
 					height: 60px;
@@ -67,12 +67,12 @@
 		.login-container {
 			height: 460px;
 			margin: 100px auto;
-			width: 350px;
+			width: 90%;
 
 			&:after {
 				height: 1px;
-				top: 8px;
-				width: 85%;
+				//top: 8px;
+				width: 90%;;
 			}
 
 			.image_profile {
@@ -130,7 +130,8 @@
 			height: 93px;
 			margin: 50px auto;
 			padding: 17px;
-			width: 716px;
+			width: 88%;
+			max-width: 480px;
 
 			&:after {
 				height: 1px;
@@ -162,9 +163,10 @@
 	.detail {
 		
 		.container { 
-			height: 723px;
+			height: 658px;
 			margin: 50px auto;
-			width: 496px;
+			width: 95%;
+			max-width: 450px;
 		}
 
 		#card {
@@ -195,14 +197,15 @@
 						width: inherit;
 
 						img {
+							height: 100%;
 							margin: 0 auto;
-							padding-top: 55px;
-							width: 250px;
+							vertical-align: middle;
+							width: 200px;
 						}
 					}
 
 					.side {
-						height: 400px;
+						height: 345px;
 						margin: 0;
 						width: 100%;
 
@@ -223,9 +226,9 @@
 						}
 
 						&.mask {
-							-webkit-mask-position-x: 140px;
-							-webkit-mask-size: auto 580px;
-									mask-size: auto 580px;
+							-webkit-mask-position-x: 70px;
+							-webkit-mask-size: auto 500px;
+									mask-size: auto 500px;
 
 							&.b {
 								-webkit-mask-position-x: -140px;
@@ -272,7 +275,7 @@
 					.flip_icon {
 						font-size: 21px;
 						margin: 5px;
-						width: 98%;
+						width: 97%;
 					}
 				}
 
@@ -282,7 +285,78 @@
 			}
 
 			&:after {
+				width: 85%;
+			}
+		}
+	}
+
+	.sites {
+
+		ul.container {
+			margin: 100px auto;	
+		}
+
+		.site-container {
+			max-width: 350px;
+			margin: 25px 2%;
+			width: 95%;
+
+			svg {
+				max-width: 157px;
 				width: 90%;
+			}
+
+			&.green {
+
+				svg {
+					
+				}
+			}
+
+			&.purple {
+
+				svg {
+					
+				}
+			}
+
+			&.blue {
+
+				svg {
+					
+				}
+			}
+
+			&.orange {
+
+				svg {
+					
+				}
+			}
+
+			a {
+				
+			}
+
+			&:after {
+				
+			}
+
+			h3 {
+
+				span {
+					
+				}
+			}
+
+			.bottom {
+
+				a {
+
+					&:hover {
+						
+					}				
+				}
 			}
 		}
 	}
@@ -298,11 +372,11 @@
 }
 
 /* <!---- Portrait Orientation ----> */
-@media all and (min-width: 1200px) and (orientation:portrait) {
+@media all and (max-width: 480px) and (orientation:portrait) {
 	
 }
 
 /* <!---- Landscape Orientation ----> */
-@media all and (min-width: 1200px) and (orientation:landscape) {
-
+@media all and (max-width: 480px) (orientation:landscape) {
+	
 }

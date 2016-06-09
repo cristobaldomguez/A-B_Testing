@@ -1,7 +1,7 @@
-@import "variables.less";
+@import "variables.scss";
 
-/* <!---------- Phones ----------> */
-@media all and (min-width: 481px) and (max-width: 767px) {
+/* <!---------- Mid Tablets ----------> */
+@media all and (min-width: 768px) and (max-width: 991px) {
 
 	.container {
 		margin: 0 auto;
@@ -18,17 +18,17 @@
 			.mainMenu {
 				float: left;
 				padding: 18px 0 0 0;
-				width: 15%;
+				width: 10%;
 
 				.icon-menu {
 					font-size: 24px;
-					margin-left: 10px;
+					margin-left: 30px;
 				}	
 			}
 
 			.logo {
 				float: right;
-				width: 68.9%;
+				width: 79.3%;
 
 				img {
 					height: auto;
@@ -44,7 +44,7 @@
 			.mainProfile {
 				float: right;
 				margin: 5px 5px 0 0;
-				width: 15%;
+				width: 10%;
 
 				img {
 					height: 60px;
@@ -70,7 +70,7 @@
 
 			&:after {
 				height: 1px;
-				//top: 8px;
+				top: 8px;
 				width: 85%;
 			}
 
@@ -129,9 +129,7 @@
 			height: 93px;
 			margin: 50px auto;
 			padding: 17px;
-			width: 90%;
-			min-width: 430px;
-			max-width: 716px;
+			width: 716px;
 
 			&:after {
 				height: 1px;
@@ -163,10 +161,9 @@
 	.detail {
 		
 		.container { 
-			height: 695px;
+			height: 723px;
 			margin: 50px auto;
-			width: 100%;
-			max-width: 450px;
+			width: 496px;
 		}
 
 		#card {
@@ -204,7 +201,7 @@
 					}
 
 					.side {
-						height: 380px;
+						height: 400px;
 						margin: 0;
 						width: 100%;
 
@@ -226,8 +223,8 @@
 
 						&.mask {
 							-webkit-mask-position-x: 140px;
-							-webkit-mask-size: auto 550px;
-									mask-size: auto 550px;
+							-webkit-mask-size: auto 580px;
+									mask-size: auto 580px;
 
 							&.b {
 								-webkit-mask-position-x: -140px;
@@ -284,7 +281,7 @@
 			}
 
 			&:after {
-				width: 85%;
+				width: 90%;
 			}
 		}
 	}
@@ -300,11 +297,11 @@
 }
 
 /* <!---- Portrait Orientation ----> */
-@media all and (min-width: 481px) and (max-width: 767px) and (orientation:portrait) {
-
+@media all and (min-width: 768px) and (max-width: 992px) and (orientation:portrait) {
+	
 }
 
 /* <!---- Landscape Orientation ----> */
-@media all and (min-width: 481px) and (max-width: 767px) (orientation:landscape) {
+@media all and (min-width: 768px) and (max-width: 992px) and (orientation:landscape) {
 
 }
