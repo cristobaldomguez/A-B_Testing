@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-  <title>ABTesting</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+  <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">     </script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+  <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+  <title>A-B_TESTING</title>
+  
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
 
-<%= yield %>
-
+  <header>
+    <div class="container">
+      <a href="#" class="mainProfile">
+        <%= image_tag("default_profile") %>
+      </a>
+      <a href="#" class="logo">
+        <%= image_tag("logo") %>
+      </a>
+      <a href="#" class="mainMenu">
+        <i class="icon-menu" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
+  <%= yield %>
+  <footer>
+    <small>Copyright</small>
+  </footer>
+    
+  <!-- this is where we put our custom functions -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
