@@ -99,7 +99,7 @@
 					width: 80%;
 				}
 
-				button {
+				.submit {
 					margin: 10px 10%;
 					padding: 10px 0;
 					width: 80%;
@@ -301,10 +301,10 @@
 
 /* <!---- Portrait Orientation ----> */
 @media all and (min-width: 481px) and (max-width: 767px) and (orientation:portrait) {
-
+	
 }
 
 /* <!---- Landscape Orientation ----> */
-@media all and (min-width: 481px) and (max-width: 767px) (orientation:landscape) {
+@media all and (min-width: 481px) and (max-width: 767px) and (orientation:landscape) {
 
 }

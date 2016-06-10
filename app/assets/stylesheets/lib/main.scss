@@ -120,15 +120,15 @@ header {
 			   color: $colorLightBlue;
 			}
 
-			button {
+			.submit {
 				background-color: $colorLightBlue;
 				border: 1px solid $colorLightBlue;
-				color: $colorWhite;
+				color: #fff !important;
 				cursor: pointer;
 				font: 14px/28px 'Poppins', Helvetica;
 			}
 
-			button:hover {
+			.submit:hover {
 				background-color: $colorWhite;
 				color: $colorLightBlue;
 			}

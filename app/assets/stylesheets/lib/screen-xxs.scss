@@ -71,7 +71,6 @@
 
 			&:after {
 				height: 1px;
-				//top: 8px;
 				width: 90%;;
 			}
 
@@ -100,7 +99,7 @@
 					width: 80%;
 				}
 
-				button {
+				.submit {
 					margin: 10px 10%;
 					padding: 10px 0;
 					width: 80%;
@@ -369,14 +368,4 @@
 			margin-top: 13px;
 		}
 	}
-}
-
-/* <!---- Portrait Orientation ----> */
-@media all and (max-width: 480px) and (orientation:portrait) {
-	
-}
-
-/* <!---- Landscape Orientation ----> */
-@media all and (max-width: 480px) (orientation:landscape) {
-	
 }
