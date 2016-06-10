@@ -10,7 +10,7 @@
 body {
 	background-color: $colorGray_bg;
 	color: $colorFont;
-	font-family: 'Poppins', Helvetica;
+	font-family: $font-family;
 }
 
 a {
@@ -102,10 +102,29 @@ header {
 				-moz-appearance: none;
 				border-radius: 0;
 				border: 0;
+				font: 14px/28px $font-family;
+				text-align: center;
+			}
+
+			textarea,
+			input[type="text"],
+			input[type="email"],
+			input[type="button"],
+			input[type="password"] {
 				border-bottom: 1px solid $colorLightBlue;
 				color: $colorLightBlue;
-				font: 14px/28px 'Poppins', Helvetica;
-				text-align: center;
+			}
+
+			input[type="submit"] {
+				background-color: $colorLightBlue;
+				border: 1px solid $colorLightBlue;
+				color: $colorWhite;
+				cursor: pointer;
+			}
+
+			input[type="submit"]:hover {
+				background-color: $colorWhite;
+				color: $colorLightBlue;
 			}
 
 			::-webkit-input-placeholder {
@@ -120,22 +139,9 @@ header {
 			   color: $colorLightBlue;
 			}
 
-			.submit {
-				background-color: $colorLightBlue;
-				border: 1px solid $colorLightBlue;
-				color: #fff !important;
-				cursor: pointer;
-				font: 14px/28px 'Poppins', Helvetica;
-			}
-
-			.submit:hover {
-				background-color: $colorWhite;
-				color: $colorLightBlue;
-			}
-
 			.remember {
 				color: $colorFont;
-				font: 300 12px/24px 'Poppins', Helvetica;
+				font: 300 12px/24px $font-family;
 				text-align: left;
 				text-decoration: none;
 			}
@@ -143,7 +149,7 @@ header {
 
 		.forgot {
 			color: $colorFont;
-			font: 300 12px/24px 'Poppins', Helvetica;
+			font: 300 12px/24px $font-family;
 			text-decoration: none;
 		}
 	}
@@ -308,12 +314,12 @@ header {
 				}
 				
 				h3 {
-					font: 500 18px/26px 'Poppins', Helvetica;
+					font: 500 18px/26px $font-family;
 				}
 
 				.option {
 					display: block;
-					font: 300 14px/26px 'Poppins', Helvetica;
+					font: 300 14px/26px $font-family;
 				}
 
 				ul {
@@ -431,7 +437,7 @@ header {
 		}
 
 		h3 {
-			font: 300 24px/26px 'Poppins', Helvetica;
+			font: 300 24px/26px $font-family;
 			height: 78px;
 
 			span {
