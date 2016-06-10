@@ -28,12 +28,77 @@ header {
 		
 		.mainMenu {
 			display: block;
+			position: relative;
 
 			.icon-cog,
 			.icon-menu {
 				color: $colorBlue;
 				font-size: 24px;
-			}	
+				padding: 3px 5px;
+			}
+
+			.popup {
+				background: $colorWhite;
+				border-radius: 0 0 5px 5px;
+				display: none;
+				margin-top: 3px;
+				padding: 5px 0;
+				position: absolute;
+				width: 43px;
+
+				li {
+					border-bottom: 1px solid $colorLightBlue;
+					list-style-type: none;
+					padding: 4px 0;
+					text-align: center;
+
+					a {
+						color: $colorBlue;
+					}
+				}
+
+				li:hover {
+					background-color: $colorBlue;
+
+					a {
+						color: $colorWhite;
+					}
+				}
+
+				li:last-child {
+					border-bottom: none;
+				}
+			}
+
+			.shadow {
+				position: absolute;       
+				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			}
+
+			.shadow:before, 
+			.shadow:after {
+				content: "";
+				position: absolute; 
+				z-index: -1;
+				box-shadow: 0 0 20px rgba(0,0,0,0.8);
+				top: 50%;
+				bottom: 0;
+				left: 10px;
+				right: 10px;
+				border-radius: 100px / 10px;
+			}
+		}
+
+		.mainMenu:hover > .popup {
+		    display: block;
+		}
+
+		.mainMenu:hover > .icon-cog,
+		.mainMenu:hover > .icon-menu {
+			box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25);
+			background-color: $colorBlue;
+			border-radius: 5px 5px 0 0;
+			color: $colorWhite;
 		}
 
 		.logo {

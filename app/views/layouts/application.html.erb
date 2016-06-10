@@ -25,9 +25,15 @@
       <a href="#" class="logo">
         <%= image_tag("logo") %>
       </a>
-      <a href="#" class="mainMenu">
+      <div href="#" class="mainMenu">
         <i class="icon-cog" aria-hidden="true"></i>
-      </a>
+        <ul class="popup shadow">
+          <li><a href="#"><i class="icon-globe" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="icon-plus" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="icon-pencil" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="icon-trash" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <%= yield %>
