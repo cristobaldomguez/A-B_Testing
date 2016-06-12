@@ -2,23 +2,23 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  	 devise_scope :user do
+  devise_scope :user do
 
-        authenticated :user do
-        root 'entry#start', as: :authenticated_root
-        end
+    authenticated :user do
+      root 'entry#start', as: :authenticated_root
+    end
 
     
-        unauthenticated do
-        root 'devise/sessions#new', as: :unauthenticated_root
-        end 
-      end 
- 
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end 
+  end 
+  
 
-      resources :sites
-      resources :ab_tests
+  resources :sites
+  resources :ab_tests
 
-       get 'entry/startsettings'
-       get 'entry/start'
+  get 'entry/startsettings'
+  get 'entry/start'
 
 end
