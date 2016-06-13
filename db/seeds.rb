@@ -1,4 +1,7 @@
 User.destroy_all
+Site.destroy_all
+
+
 sadmin = User.create(
   firstname: 'Cristobal',
   lastname: 'Domínguez',
@@ -16,6 +19,7 @@ admin = User.create(
   password: 'password',
   role: 1
 )
+
 users = []
 
 (1..10).each do |i|
@@ -26,5 +30,15 @@ users = []
     email: "client_#{i}@mail.com",
     password: 'password',
     role: 2
+  )
+end
+
+
+domains = ['jesusscript.cl', 'css3.cl', 'html5.cl', 'jquery.cl']
+
+(0...4).each do |i|
+  Site.create(
+    domain: domains[i],
+    user: sadmin
   )
 end
