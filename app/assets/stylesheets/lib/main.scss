@@ -361,9 +361,9 @@ header {
 					}
 
 					&.mask {
-						-webkit-mask-image: url(../images/wave.svg);
-								mask-image: url(../images/wave.svg);
-									//mask: url(../images/wave_ff.svg#wave);
+						-webkit-mask-image: image-url('wave.svg');
+								mask-image: image-url('wave.svg');
+									//mask: image-url(wave_ff.svg#wave);
 						mask-mode: alpha;
 						-webkit-mask-repeat: repeat-x;
 								mask-repeat: repeat-x;
