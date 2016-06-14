@@ -1,2 +1,53 @@
-<h1>AbTests#show</h1>
-<p>Find me in app/views/ab_tests/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<article class="content detail">
+  <section class="container">
+    <div id="card">
+      <!-- Front -->
+      <div class="test front">
+        <div class="hiddenContent">
+          <figure class="side orange_gr mask">
+            <%= image_tag("chart01_b.svg") %>
+          </figure>
+          <h3>Call to action verde</h3>
+          <p class="option">Opción A</p>
+          <ul>
+            <li>
+              <p>Clicks<span class="percent">45</span></p>
+            </li>
+            <li>
+              <p>Rebotes<span class="percent">10</span></p>
+            </li>
+            <li>
+              <p>Conversión<span class="percent">35</span></p>
+            </li>
+          </ul>
+          <a href="#" class="flip"><i class="icon-ccw flip_icon" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      
+      <!-- Back -->
+      <div class="test back">
+        <div class="hiddenContent">
+          <figure class="side blue_gr mask b">
+            <%= image_tag("chart01_b.svg") %>
+          </figure>
+          <h3>Call to action verde</h3>
+          <p class="option">Opción B</p>
+          <ul>
+            <li>
+              <p>Clicks<span class="percent">55</span></p>
+            </li>
+            <li>
+              <p>Rebotes<span class="percent">30</span></p>
+            </li>
+            <li>
+              <p>Conversión<span class="percent">15</span></p>
+            </li>
+          </ul>
+          <a href="#" class="flip"><i class="icon-ccw flip_icon" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

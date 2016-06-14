@@ -1,2 +1,15 @@
-<h1>AbTests#index</h1>
-<p>Find me in app/views/ab_tests/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<div class="content tests">
+	<main class="container">
+		<% @ab_tests.each do |ab_test| %>
+			<%= link_to site_ab_test_path(@site, ab_test) do %>
+				<article class="abtest">
+					<figure><%= image_tag "chart01.svg" %></figure>
+					<h3><%= ab_test.title %></h3>
+					<time datetime="2016-06-16 20:00"><%= ab_test.updated_at %></time>
+				</article>
+			<% end %>
+		<% end %>
+	</main>
+</div>
