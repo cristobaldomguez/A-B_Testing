@@ -2,7 +2,7 @@ AbTest.destroy_all
 Site.destroy_all
 User.destroy_all
 
-sadmin = User.create(
+sadmin = User.create!(
   firstname: 'Cristobal',
   lastname: 'Domínguez',
   username: 'cd_sadmin',
@@ -11,11 +11,11 @@ sadmin = User.create(
   role: 0
 )
 
-admin = User.create(
+admin = User.create!(
   firstname: 'Diego',
   lastname: 'Guajardo',
   username: 'dg_admin',
-  email: 'admin@abtesting.com',
+  email: 'admin@abt.com',
   password: 'password',
   role: 1
 )
@@ -23,7 +23,7 @@ admin = User.create(
 users = []
 
 10.times do |i|
-  users << User.create(
+  users << User.create!(
     firstname: Faker::Name.first_name,
     lastname: Faker::Name.last_name,
     username: Faker::Internet.user_name,
@@ -35,18 +35,18 @@ end
 
 
 domains = ['jesusscript.cl', 'css3.cl', 'html5.cl', 'jquery.cl']
-site = []
+sites = []
 
 4.times do |i|
-  site << Site.create(
+  sites << Site.create!(
     domain: domains[i],
     user: sadmin
   )
 end
 
 20.times do |i|
-  AbTest.create(
+  AbTest.create!(
     title: "A/B Test ##{i}",
-    site: site.sample
+    site: sites.sample
   )
 end
