@@ -51,7 +51,7 @@ class AbTestsController < ApplicationController
     #   end
     # end
 
-    render :json @data
+    #render :json @data
   end
 
   # DELETE /ab_tests/1
